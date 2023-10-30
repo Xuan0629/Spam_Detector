@@ -1,0 +1,422 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.side-bar {
+  background-color: teal;
+  padding-top: 10%;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  /* padding: 15px; */
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  /* letter-spacing: 1.5px; */
+  animation: side-from-left .5s;
+}
+
+
+
+@keyframes side-from-left {
+  0% {left: -1000px;}
+  100% {left: 0;}
+}
+
+.nav-list ul {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.nav-list li a{
+  text-decoration: none;
+  display: block;
+  color: black;
+  width: 100%;
+  padding: 8px 0 8px 30px;
+  font-weight: bold;
+}
+
+.nav-list li a#active {
+  color: red;
+}
+
+.nav-list li a:hover {
+  background-color: #d1d1d1;
+}
+
+.nav-list li a#active:hover {
+  color: black;
+}
+
+.top, .bottom {
+  background-color: #d1d1d1;
+  position: fixed;
+  width: 100%;
+  color: teal;
+}
+
+.top {
+  padding: 15px;
+  height: 10%;
+  top: 0%;
+}
+
+.bottom {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+  bottom: 0%;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 10%;
+  margin-right: 20%;
+  transition: .5s;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 60%;
+}
+
+hr {
+  height: 2px;
+  background-color: #d1d1d1;
+  border: none;
+  margin: 20px 0;
+  width: 100%;
+}
+/*
+table {
+    margin-top: 20px;
+} */
+
+table, td, th{
+  border: 1px black solid;
+  border-collapse: collapse;
+  padding: 8px;
+}
+th{
+  font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(244, 96, 96);
+}
+td{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: teal;
+}
+
+.side-bar-2 {
+  background-color: teal;
+  padding-top: 10%;
+  width: 20%;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  /* padding: 15px; */
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  /* letter-spacing: 1.5px; */
+  animation: side-from-right .5s;
+}
+
+@keyframes side-from-right {
+  0% {right: -1000px;}
+  100% {right: 0;}
+}
+
+
+.performance-container {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 5%;
+}
+
+.performance-container>p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  font-size: 22px;
+}
+
+.performance {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.p-heading {
+  margin-bottom: 5px;
+}
+
+.p-value {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

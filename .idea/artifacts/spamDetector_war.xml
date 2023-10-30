@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spamDetector:war">
+    <output-path>$PROJECT_DIR$/spamDetectorServer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>spamDetector</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spamDetector-1.0.war">
+      <element id="artifact" artifact-name="spamDetector:war exploded" />
+    </root>
+  </artifact>
+</component>

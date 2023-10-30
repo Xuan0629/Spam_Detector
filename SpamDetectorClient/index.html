@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spam Analysis Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="top">
+    <h1>Spam Detector Dashboard</h1>
+  </div>
+  <div class="side-bar" id="side-bar">
+    <div class="nav">
+      <div class="nav-list">
+        <ul>
+          <li><a href="index.html" id="active">DASHBOARD</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="heading">
+      <h2>Spam Analysis Dashboard</h2>
+      <br>
+      <p>The table below displays the result of spam detector algorithm.</p>
+      <hr>
+    </div>
+    <div class="table">
+      <table id="chart">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Spam Probability(%)</th>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+<!--            test value-->
+<!--            <td>1092401904194u</td>-->
+<!--            <td>2.1803418</td>-->
+<!--            <td>Ham</td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="side-bar-2" id="side-bar-2">
+    <div class="performance-container">
+      <p>Performance of the model:</p>
+      <div class="performance">
+        <p class="p-heading">Accuracy</p>
+        <p id="accuracy" class="p-value"></p>
+      </div>
+      <div class="performance">
+        <p class="p-heading">Precision</p>
+        <p id="precision" class="p-value"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">Group - Gaidu-Saroa-Zheng</div>
+
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
