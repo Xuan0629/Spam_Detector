@@ -1,3 +1,4 @@
+# The repository is a duplication of the original submission of https://github.com/OntarioTech-CS-program/w23-csci2020u-assignment01-gaidu-saroa-zheng
 # Assignment 1 - Spam Detector
 
 >## Group Members
